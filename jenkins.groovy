@@ -19,7 +19,7 @@ stage('Deploy') {
         sh '''
         sudo docker stop app || true
         sudo docker rm app || true
-        sudo docker run -d -p 8080:8080 --name app java-devops-app
+        sudo docker run -d -p 8080:80 --name app java-devops-app
         '''
     }
 }
